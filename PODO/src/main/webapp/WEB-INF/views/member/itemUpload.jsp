@@ -40,15 +40,7 @@
             </section>
         </div>   
 
-    <c:choose>
-            <c:when test="${!empty boardImageList}">
-                <form action="${contextPath}/board/updateBoard/${boardNo}" enctype="multipart/form-data" method="POST" class="itemUpload" onsubmit="return writeValidate()">
-            </c:when >
-
-            <c:otherwise>
-                <form action="${contextPath}/board/itemUpload" enctype="multipart/form-data" method="POST" class="itemUpload" onsubmit="return writeValidate()">
-            </c:otherwise>
-    </c:choose>
+    <form action="${contextPath}/board/itemUpload" enctype="multipart/form-data" method="POST" class="itemUpload" onsubmit="return writeValidate()">
 
         <%-- imageList에 존재하는 이미지 레벨을 이용하여 변수 생성 --%>
         <c:choose>

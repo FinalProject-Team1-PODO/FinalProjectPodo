@@ -53,7 +53,6 @@ public class ItemBoardController {
 
 		List<BoardImage> boardImageList = service.selectBoardImageList(boardNo);
 		model.addAttribute("boardImageList", boardImageList);
-		model.addAttribute("boardNo", boardNo);
 
 		return "member/itemUpload";
 	}
@@ -111,7 +110,7 @@ public class ItemBoardController {
 
 		if (result > 0) {
 			message = "게시글이 수정되었습니다.";
-			path = "../detail/" + boardNo;
+			path = "../board/detail/" + boardNo;
 		} else {
 			message = "게시글 수정 실패";
 			path = req.getHeader("referer");
